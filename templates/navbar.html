@@ -1,0 +1,23 @@
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary nav-format">
+
+  <div class="container-fluid nav-format">
+    <a class="navbar-brand" href="http://127.0.0.1:8000/home" class="nav-hover">SamShine</a>
+
+    <form class="d-flex" role="search" method="post" action="{% url 'search' %}">
+      {% csrf_token %}
+      <input class="form-control me-2  navbar-search" type="search" placeholder="Search for albums" aria-label="Search" name="searched">
+      <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+
+    <div class = "d-flex justify-content-between">
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/update_profile">Update Profile</a>
+      </li>
+         
+      <li class="nav-item">
+        <a class="nav-link nav-margin" href="http://127.0.0.1:8000/logout">Logout</a>
+      </li>
+    </div>
+  </div>
+
+</nav>

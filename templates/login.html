@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+<div class="full-screen-div bg-img-login">
+    <div>
+        <form action=' ' method="POST" class = "form-align form-align-login">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" class="form-input"><br>
+            <input type="password" name="password" placeholder="Password" class="form-input"><br>
+            <input type="submit" value="login" class="form-input">
+        </form>
+    </div>
+
+    <div>
+        {% for message in messages%}
+        <h3 class =" user-welcome align-error-login center-align">{{message}}</h3>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}

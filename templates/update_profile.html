@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{%block header%}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{%block content%}
+<div class="full-screen-div home-bg">
+    <h1 class = "headings align-header center-align">Update your credentials here!</h1>
+<form method="post" class = "form-align form-align-register card-content">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-dark">Update</button>
+</form>
+</div>
+{% endblock %}

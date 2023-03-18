@@ -1,0 +1,442 @@
+/* 
+.bg-img {
+  height: 100vh;
+  background-image: url(./images/bg_image.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  }
+
+  .landing-header {
+    font-size: 3em;
+    font-weight: 570;
+    color: whitesmoke;
+    padding:  3em 0 1.5em 0;
+  }
+
+  .login{
+    background-color: black;
+  }
+
+  .btn-format {
+    padding: 0 2em 0 2em;
+    margin: 0 2em 0 2em;
+    border: 0 2em 0 2em;
+  }
+
+  .form-imput {
+    margin-bottom: 1.25em;
+    padding: 2em 0 0 0;
+  }
+
+  .parent-form {
+    display: grid;
+  }
+
+  .child-form {
+    margin: 10em 0 0 0;
+  } */
+
+  .bg-img {
+    height: 100vh;
+  
+    /* overlay */
+    background-image: linear-gradient(120deg, rgba(55, 7, 81, 0.3),rgba(33, 9, 45,0.0)),
+      url(./images/bg_image.png);
+  
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .title-font {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    color: whitesmoke;
+  }
+  
+  .register-title {
+    margin:auto auto 1.9rem auto;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  
+  .full-screen-div {
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 9999; */
+    background-image: linear-gradient(120deg, #370751,#21092D);
+  }
+  
+  .bg-img-login {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+      url(./images/maybe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .bg-img-register {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+      url(./images/register-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .landing-header {
+    font-size: 3em;
+    font-weight: 500;
+    padding: 3em 0 1.1em 0;
+  }
+  
+  .btn-format {
+    padding: 0.5em 2em 0.5em 2em;
+    margin: 0 1em 0 1em;
+    background-color: #1C0D2A;
+    border-color: transparent;
+  }
+  
+  .btn-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: whitesmoke;
+  }
+  
+  .nounderline button {
+    text-decoration: none;
+  }
+  
+  .form-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    border-radius: 1rem;
+  }
+  
+  .form-align-register {
+    padding: 4.5rem 4.2rem 1.6rem 4.2rem;
+    background-color: rgba(52, 10, 51, 0.8);
+  }
+  
+  .form-align-login {
+    padding: 5rem 3rem 4rem 3rem;
+    background-color: rgba(97, 16, 80, 0.8);
+  }
+  
+   .form-input {
+    margin-bottom: 1.3em;
+    text-align: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #d495db;
+    font-family: open sans;
+    color: black;
+    border-radius: 1rem;
+    border-color: #21092D;
+  } 
+  
+  button[type='submit'] {
+    margin-left: auto;
+    margin-right: auto;
+    border-color: transparent;}
+  
+  input::placeholder {
+    color:black;
+    font-size: 1rem;
+    font-family: montserrat;
+  }
+  
+  /* NAVBAR */
+  .nav-format {
+    background-color: #370751;
+    padding: 0 0 0 0;
+  } 
+  
+  .navbar-brand {
+    color: whitesmoke;
+    padding: 0.5rem 0 0.5rem 7rem;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: montserrat;
+  }
+  
+  .nav-item{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0 3rem 0 0;
+    list-style-type: none;
+    font-family: open sans;
+  }
+  
+  .nav-margin {
+    margin-right: 7rem;
+  }
+  
+  .navbar-search {
+    padding: 0 2rem 0 1rem;
+    text-align: center;
+    font-family: open sans;
+  }
+  
+  .btn-outline-secondary {
+    border-color: whitesmoke;
+    color: whitesmoke;
+    font-family: open sans;
+  }
+  
+  .navbar .nav-item a:hover {
+    color: white;
+  }
+  
+  /* HOME */
+  
+  .home-bg {
+    background-image: linear-gradient(0deg, rgb(55, 7, 81), rgb(188, 16, 79) 130.5%);
+    position: fixed;
+    
+  }
+  
+  .scroll {
+   
+    overflow-y:auto;
+  }
+  
+  .user-welcome {
+    font-family: open sans ;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding: 5rem 0 0rem 0rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+  
+  
+  /* CARD */
+  
+  .card-container {
+    display: flex; /* enable flex layout */
+    flex-wrap: wrap; /* allow items to wrap to the next row */
+   
+  }
+  
+  .card{
+    background-color: transparent;
+    border-color: transparent;
+    flex: 1 0 33.33%;
+    margin-left: 7rem;
+    margin-right: 7em;
+    margin-top: 2rem;
+    padding-bottom: 2rem ;
+  }
+  
+  .card-content {
+    color: whitesmoke;
+  }
+  
+  .card-title {
+    font-family: montserrat;
+    font-size: 1.4rem;
+    font-weight: 550 ;
+  }
+  
+  .card-text {
+    font-family: Open sans;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .card-body {
+    padding-left: 0px;
+  }
+  
+  .headings {
+    font-family: open sans;
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+  
+  .content {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .center-align {
+    text-align: center;
+  }
+  
+  .img-align {
+    margin-bottom: 1.3rem;
+  }
+  
+  .img-limit {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+  
+  .align-header {
+    margin-right: 7rem;
+    margin-left: 7rem;
+    padding-top: 7rem;
+  }
+  
+  .align-error {
+    text-align: center;
+    padding-top:5.9rem;
+    color: white;
+  }
+  
+  .align-error-login {
+    text-align: center;
+    padding-top: 15rem;
+    color: white;
+  }
+  
+  .d-flex2 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 70rem;
+    gap:2rem;
+  }
+  
+  .d-flex3 {
+    margin-left: 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
+    justify-items: center;
+    color: whitesmoke;
+    font-size: 1.3rem;
+  }
+  
+  .playlist-text {
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+  }
+  
+  .left-align {
+    text-align: left;
+    margin-left: 7rem;
+    margin-top : 1rem;
+  }
+  
+  .playlist-song-list {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    float: left;
+    padding-right: 4rem;
+  }
+  
+  .playlist-margin {
+    margin-bottom: 2rem;
+  }
+  
+  
+  .playlist-container {
+    display: grid;
+  }
+  .audio-container {
+      /* display: flex;
+      align-items: center; /* center align items vertically */
+      justify-content:space-between; 
+      display: inline-grid;
+      margin-right: 7rem;
+      grid-template-columns: 20rem auto auto;
+      align-content: center;
+  }
+  
+  .playlist-audio {
+    margin-bottom: 1.5rem;
+    height: 2.3rem;
+  }
+  
+  .btn-align {
+    margin-top:0rem;
+  }
+  
+  .btn {
+    transition-duration: 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #350441; /* Green */
+    color: white;
+  }
+  
+  .card-text-playlist {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    font-weight: 400;
+    padding-bottom:1rem;
+  }
+  
+  .audio-align {
+    padding:0.5rem 0 2rem 0;
+    height: 5rem;
+  }
+  
+  .search-text {
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  /* FOOTER */
+  
+  .footer-pos {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh
+  }
+    .footer-format {
+     display: flex; 
+     flex-direction: column; 
+     min-height: 100vh;
+     background-color: transparent;
+  } */
+  
+   .transparent-footer {
+     background-color: black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+  }
+  
+  .go-to-playlist {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: #21092D;
+    font-size: 1.2rem;
+    font-family: Open Sans;
+  
+  }

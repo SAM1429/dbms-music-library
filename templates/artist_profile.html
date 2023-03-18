@@ -1,0 +1,15 @@
+
+{% extends 'base.html'%}
+
+{%block header%}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{%block content%}
+<div class = "full-screen-div home-bg center-align">
+<h1 class = "headings align-header" >{{artist.artist_name}} </h1><br>
+<img src = "{{artist.artist_pic.url}}" alt = "artist pic" class="img-limit img-align">
+
+
+</div>
+{% endblock %}

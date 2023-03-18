@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+
+{%block header%}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{%block content%}
+<div class="full-screen-div home-bg scroll center-align">
+    {% if searched %}
+    <h1 class="user-welcome align-header">You searched for "{{searched}}"</h1>
+    <br>
+
+    {% for n in album_cover %}
+
+    <img src="{{n.album_logo.url}}" alt="{{searched}} Album Cover" class="img-limit img-align">
+    {% endfor %}
+
+    <h1 class="card-title card-content playlist-margin"> {{searched}} by
+        <a href = "/artist_profile/{{ a_name.artist_id }}" class = "card-title card-content search-text">{{a_name.artist_name}}!</a>
+        <!-- <a href="/artist_profile/{{ a_name.artist_id }}" class=" card-title nounderline card-content ">
+            {{a_name.artist_name}}!
+        </a> -->
+    </h1>
+
+
+    {% for n in search_word %}
+   
+        <h1 class="content">{{n.song_title}}</h1>
+        <audio controls muted class="audio-align">
+            <source src="{{n.file_type.url}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        {% endfor %}
+    {% elif not search_word %}
+    <h1 class="user-welcome align-header center-align">Sorry, search not found</h1>
+
+{%else%}
+
+{%endif%}
+
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<div class="full-screen-div bg-img-register">
+    <form action=' ' method="POST" class="form-align form-align-register">
+        {% csrf_token %}
+
+        <h1 class="register-title title-font">Register Now!</h1>
+
+        <input type="text" name='first_name' placeholder="First Name" class="form-input"><br>
+        <input type="text" name='last_name' placeholder="Last Name" class="form-input"><br>
+        <input type="text" name='username' placeholder="Username" class="form-input"><br>
+        <input type="email" name='email' placeholder="E-Mail" class="form-input"><br>
+        <input type="password" name='password1' placeholder="Password" class="form-input"><br>
+        <input type="password" name='password2' placeholder="Confirm Password" class="form-input"><br>
+        <input type="submit" class="form-input">
+    </form>
+
+    <div>
+        {% for message in messages%}
+        <h3 class = "align-error center-align user-welcome">{{message}}</h3>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock%}

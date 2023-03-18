@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block header%}
+{% include 'navbar.html' %}
+{% endblock %}
+
+
+{%block content%}
+
+<div class="full-screen-div home-bg scroll">
+
+
+  <h1 class="headings align-header">Welcome {{user}}</h1>
+  <a href="playlist" class="playlist-btn">
+    <button type="button" class="btn btn-dark go-to-playlist">Go to My Playlist</button>
+  </a>
+
+
+  <h1 class="headings">Listen Now!</h1>
+  <div class="card-container">
+    {% for n in AlbumsData %}
+    <!-- <h1>{{n.album_name}}</h1> -->
+
+    <div class="card">
+      <img src="{{n.album_logo.url}}" class="card-img-top img-limit" alt="{{n.album_name}} cover">
+      <div class="card-body">
+        <h5 class="card-title card-content">{{n.album_name}}</h5>
+        <p class="card-text card-content">{{n.artist_id}}</p>
+      </div>
+    </div>
+
+
+    {% endfor %}
+
+
+    <!-- <a href="playlist"><h1>Go To Playlist</h1></a> -->
+  </div>
+
+  {% endblock %}

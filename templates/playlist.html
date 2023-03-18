@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+<header>
+  {% block header %}
+  {% include 'playlist_navbar.html' %}
+  {% endblock%}
+</header>
+
+
+{%block content%}
+
+<div class="full-screen-div home-bg ">
+
+  <h1 class="headings center-align align-header playlist_margin"> Your Playlist</h1>
+
+  <form class="d-flex d-flex2" role="search" method="post" action="{% url 'playlist' %}">
+    {% csrf_token %}
+    <input class="form-control playlist_margin" type="search" placeholder="Select songs here!" aria-label="Search"
+      name="searched">
+    <button class="btn d-flex3" type="submit">Add</button>
+  </form>
+
+
+
+
+  <!-- {{user.id}} -->
+  <h2 class="headings playlist-margin">The current songs in your playlist!</h2>
+
+  <div class="playlist-container left-align">
+
+    {% for n in PlaylistData %}
+    {% if n.user.id == user.id %}
+    <div class="audio-container">
+      <h1 class="card-text card-text-playlist">{{n.song_title}}</h1>
+      <audio controls muted class="playlist-audio">
+        <source src="{{n.audio_file.url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <a href="/delete_song/{{ n.id }}"><button type="button"
+          class="btn btn-outline-secondary btn-align playlist-btn">Delete song</button></a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+{% endblock %}
